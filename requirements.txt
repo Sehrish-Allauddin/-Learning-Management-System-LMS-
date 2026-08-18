@@ -1,0 +1,22 @@
+# LMS Project Requirements
+
+Node.js >= 18
+npm >= 9
+
+# Backend
+Express.js
+Prisma
+PostgreSQL
+JWT Authentication
+Nodemailer / SMTP
+
+# Frontend
+React
+Vite
+
+# Installation
+npm install
+
+# Database
+npx prisma generate
+npx prisma db push

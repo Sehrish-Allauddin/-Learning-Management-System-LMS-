@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Course Management — LMS Digital Learning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span>LMS <span style="opacity:.6; font-weight:400; font-size:14px; margin-inline-start:4px;">Admin</span></div>
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" data-placeholder data-en="Search users, courses, reports…" data-ur="صارفین، کورسز، رپورٹس تلاش کریں…" placeholder="Search users, courses, reports…" />
+    </div>
+    <div class="right">
+      <div class="lang-toggle">
+        <button data-lang="en" class="active">EN</button>
+        <span style="opacity:.4">|</span>
+        <button data-lang="ur">اردو</button>
+      </div>
+      <button class="icon-btn" aria-label="Notifications">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+        <span class="badge-dot"></span>
+      </button>
+      <img class="avatar" src="assets/avatar.svg" alt="Admin avatar" />
+    </div>
+  </header>
+
+  <div class="body-shell">
+    <aside class="sidebar admin-sidebar">
+      <div class="welcome">
+        <span class="role-pill" data-en="Administrator" data-ur="ایڈمنسٹریٹر">Administrator</span>
+        <h1 data-en="Control Center" data-ur="کنٹرول سینٹر">Control Center</h1>
+        <p data-en="Manage content, users & progress" data-ur="مواد، صارفین اور پیش رفت کا نظم کریں">Manage content, users &amp; progress</p>
+      </div>
+      <ul class="nav">
+        <li><a href="admin-dashboard.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          <span data-en="Dashboard" data-ur="ڈیش بورڈ">Dashboard</span>
+        </a></li>
+        <li><a href="admin-users.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="4"/><path d="M2 21c1.2-4 4.3-6 7-6s5.8 2 7 6"/><circle cx="17" cy="8" r="3"/><path d="M22 21c-.5-2.7-1.8-4.5-3.5-5.5"/></svg>
+          <span data-en="Users" data-ur="صارفین">Users</span>
+        </a></li>
+        <li><a href="admin-courses.html" class="active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>
+          <span data-en="Courses" data-ur="کورسز">Courses</span>
+        </a></li>
+        <li><a href="admin-assessments.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <span data-en="Assessments" data-ur="جائزے">Assessments</span>
+        </a></li>
+        <li><a href="admin-reports.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+          <span data-en="Reports" data-ur="رپورٹس">Reports</span>
+        </a></li>
+      </ul>
+      <a href="index.html" class="logout">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        <span data-en="Logout" data-ur="لاگ آؤٹ">Logout</span>
+      </a>
+    </aside>
+
+    <main class="main">
+
+      <!-- ===== COURSE LIST VIEW ===== -->
+      <div id="courseListView">
+        <div class="admin-toolbar">
+          <div>
+            <h1 class="page-title" style="margin-bottom:6px;" data-en="Course Management" data-ur="کورس کا انتظام">Course Management</h1>
+            <p class="page-sub" style="margin-bottom:0;" data-en="Create courses, sequence modules, and upload learning content." data-ur="کورسز بنائیں، ماڈیولز کی ترتیب دیں، اور تعلیمی مواد اپ لوڈ کریں۔">Create courses, sequence modules, and upload learning content.</p>
+          </div>
+          <button class="btn" id="newCourseBtn" data-en="+ Create Course" data-ur="+ کورس بنائیں">+ Create Course</button>
+        </div>
+
+        <div class="data-table-wrap">
+          <table class="data-table" data-table-target>
+            <thead>
+              <tr>
+                <th data-en="Course" data-ur="کورس">Course</th>
+                <th data-en="Category" data-ur="زمرہ">Category</th>
+                <th data-en="Modules" data-ur="ماڈیولز">Modules</th>
+                <th data-en="Enrolled" data-ur="داخلہ شدہ">Enrolled</th>
+                <th data-en="Avg. Completion" data-ur="اوسط تکمیل">Avg. Completion</th>
+                <th data-en="Status" data-ur="حیثیت">Status</th>
+                <th data-en="Actions" data-ur="اقدامات">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong data-en="Project Management Essentials" data-ur="پراجیکٹ مینجمنٹ کے بنیادی اصول">Project Management Essentials</strong></td>
+                <td data-en="Project Management" data-ur="پراجیکٹ مینجمنٹ">Project Management</td>
+                <td>6</td>
+                <td>412</td>
+                <td><div class="mini-prog"><div class="prog-track"><div class="prog-fill" style="width:65%;"></div></div><span>65%</span></div></td>
+                <td><span class="status-chip active" data-en="Published" data-ur="شائع شدہ">Published</span></td>
+                <td><div class="row-actions">
+                  <button aria-label="Edit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>
+                  <button aria-label="Assign"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="4"/><path d="M2 21c1.2-4 4.3-6 7-6s5.8 2 7 6"/></svg></button>
+                </div></td>
+              </tr>
+              <tr>
+                <td><strong data-en="Data Analysis with Python" data-ur="پائتھون کے ساتھ ڈیٹا تجزیہ">Data Analysis with Python</strong></td>
+                <td data-en="Data Science" data-ur="ڈیٹا سائنس">Data Science</td>
+                <td>8</td>
+                <td>276</td>
+                <td><div class="mini-prog"><div class="prog-track"><div class="prog-fill" style="width:20%;"></div></div><span>20%</span></div></td>
+                <td><span class="status-chip active" data-en="Published" data-ur="شائع شدہ">Published</span></td>
+                <td><div class="row-actions">
+                  <button aria-label="Edit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>
+                  <button aria-label="Assign"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="4"/><path d="M2 21c1.2-4 4.3-6 7-6s5.8 2 7 6"/></svg></button>
+                </div></td>
+              </tr>
+              <tr>
+                <td><strong data-en="Data Protection & Privacy" data-ur="ڈیٹا کا تحفظ اور رازداری">Data Protection &amp; Privacy</strong></td>
+                <td data-en="Compliance" data-ur="تعمیل">Compliance</td>
+                <td>4</td>
+                <td>891</td>
+                <td><div class="mini-prog"><div class="prog-track"><div class="prog-fill" style="width:12%;"></div></div><span>12%</span></div></td>
+                <td><span class="status-chip active" data-en="Published" data-ur="شائع شدہ">Published</span></td>
+                <td><div class="row-actions">
+                  <button aria-label="Edit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>
+                  <button aria-label="Assign"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="4"/><path d="M2 21c1.2-4 4.3-6 7-6s5.8 2 7 6"/></svg></button>
+                </div></td>
+              </tr>
+              <tr>
+                <td><strong data-en="Executive Presentation Skills" data-ur="ایگزیکٹو پریزنٹیشن کی مہارتیں">Executive Presentation Skills</strong></td>
+                <td data-en="Communication" data-ur="کمیونیکیشن">Communication</td>
+                <td>5</td>
+                <td>0</td>
+                <td><div class="mini-prog"><div class="prog-track"><div class="prog-fill" style="width:0%;"></div></div><span>0%</span></div></td>
+                <td><span class="status-chip pending" data-en="Draft" data-ur="مسودہ">Draft</span></td>
+                <td><div class="row-actions">
+                  <button aria-label="Edit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>
+                  <button aria-label="Assign"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="4"/><path d="M2 21c1.2-4 4.3-6 7-6s5.8 2 7 6"/></svg></button>
+                </div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ===== CREATE COURSE WIZARD ===== -->
+      <div id="courseWizardView" style="display:none;">
+        <a href="#" id="backToListLink" class="back-link" data-en="← Back to Courses" data-ur="← کورسز پر واپس جائیں">← Back to Courses</a>
+        <h1 class="page-title" data-en="Create New Course" data-ur="نیا کورس بنائیں">Create New Course</h1>
+        <p class="page-sub" data-en="Define course details, sequence modules, and upload content." data-ur="کورس کی تفصیلات کی وضاحت کریں، ماڈیولز کی ترتیب دیں، اور مواد اپ لوڈ کریں۔">Define course details, sequence modules, and upload content.</p>
+
+        <div class="wizard-steps" data-wizard>
+          <div class="wizard-step active">
+            <div class="num">1</div><div class="label" data-en="Course Details" data-ur="کورس کی تفصیلات">Course Details</div>
+          </div>
+          <div class="connector"></div>
+          <div class="wizard-step">
+            <div class="num">2</div><div class="label" data-en="Modules & Content" data-ur="ماڈیولز اور مواد">Modules &amp; Content</div>
+          </div>
+          <div class="connector"></div>
+          <div class="wizard-step">
+            <div class="num">3</div><div class="label" data-en="Review & Publish" data-ur="جائزہ اور شائع کریں">Review &amp; Publish</div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="panel wizard-panel" style="max-width:720px; grid-column:1/-1;">
+            <div class="form-grid" style="margin-top:0;">
+              <div class="field full">
+                <label data-en="Course Title" data-ur="کورس کا عنوان">Course Title</label>
+                <input type="text" placeholder="e.g. Project Management Essentials" />
+              </div>
+              <div class="field full">
+                <label data-en="Description" data-ur="تفصیل">Description</label>
+                <textarea rows="3" placeholder="Brief overview of what learners will gain from this course" style="border:1.5px solid var(--border); border-radius:var(--radius-sm); padding:12px 14px; font-size:14.5px; font-family:inherit; background:var(--green-50); resize:vertical;"></textarea>
+              </div>
+              <div class="field">
+                <label data-en="Category" data-ur="زمرہ">Category</label>
+                <select>
+                  <option data-en="Project Management" data-ur="پراجیکٹ مینجمنٹ">Project Management</option>
+                  <option data-en="Data Science" data-ur="ڈیٹا سائنس">Data Science</option>
+                  <option data-en="Compliance" data-ur="تعمیل">Compliance</option>
+                  <option data-en="Design" data-ur="ڈیزائن">Design</option>
+                  <option data-en="Customer Service" data-ur="کسٹمر سروس">Customer Service</option>
+                </select>
+              </div>
+              <div class="field">
+                <label data-en="Enrollment Type" data-ur="داخلے کی قسم">Enrollment Type</label>
+                <select>
+                  <option data-en="Self-enroll (open to all)" data-ur="خود داخلہ (سب کے لیے کھلا)">Self-enroll (open to all)</option>
+                  <option data-en="Admin-assigned only" data-ur="صرف ایڈمن کی تفویض">Admin-assigned only</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn" data-wizard-next data-en="Next: Modules & Content" data-ur="اگلا: ماڈیولز اور مواد">Next: Modules &amp; Content</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="panel wizard-panel" style="max-width:720px; grid-column:1/-1; display:none;">
+            <h3 style="font-family:var(--font-display); font-size:18px; margin:0 0 6px;" data-en="Module Sequence" data-ur="ماڈیول کی ترتیب">Module Sequence</h3>
+            <p style="font-size:13px; color:var(--ink-600); margin:0 0 18px;" data-en="Drag to reorder. The next module unlocks only after the previous one is completed." data-ur="دوبارہ ترتیب دینے کے لیے گھسیٹیں۔ اگلا ماڈیول صرف پچھلے کی تکمیل کے بعد ان لاک ہوتا ہے۔">Drag to reorder. The next module unlocks only after the previous one is completed.</p>
+
+            <div class="module-row">
+              <span class="drag-handle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="6" r="1"/><circle cx="8" cy="12" r="1"/><circle cx="8" cy="18" r="1"/><circle cx="16" cy="6" r="1"/><circle cx="16" cy="12" r="1"/><circle cx="16" cy="18" r="1"/></svg></span>
+              <span class="module-num">1</span>
+              <div class="module-info"><strong data-en="Introduction to Project Management" data-ur="پراجیکٹ مینجمنٹ کا تعارف">Introduction to Project Management</strong><span data-en="PDF · 1 quiz" data-ur="PDF · 1 کوئز">PDF · 1 quiz</span></div>
+              <button class="row-actions" style="border:none;" aria-label="Edit module"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-600)" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>
+            </div>
+            <div class="module-row">
+              <span class="drag-handle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="6" r="1"/><circle cx="8" cy="12" r="1"/><circle cx="8" cy="18" r="1"/><circle cx="16" cy="6" r="1"/><circle cx="16" cy="12" r="1"/><circle cx="16" cy="18" r="1"/></svg></span>
+              <span class="module-num">2</span>
+              <div class="module-info"><strong data-en="Defining Scope & Objectives" data-ur="دائرہ کار اور مقاصد کا تعین">Defining Scope &amp; Objectives</strong><span data-en="MP4 video · 1 quiz" data-ur="MP4 ویڈیو · 1 کوئز">MP4 video · 1 quiz</span></div>
+              <button class="row-actions" style="border:none;" aria-label="Edit module"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-600)" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>
+            </div>
+            <div class="module-row">
+              <span class="drag-handle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="6" r="1"/><circle cx="8" cy="12" r="1"/><circle cx="8" cy="18" r="1"/><circle cx="16" cy="6" r="1"/><circle cx="16" cy="12" r="1"/><circle cx="16" cy="18" r="1"/></svg></span>
+              <span class="module-num">3</span>
+              <div class="module-info"><strong data-en="Budgeting & Resource Planning" data-ur="بجٹ سازی اور وسائل کی منصوبہ بندی">Budgeting &amp; Resource Planning</strong><span data-en="PDF + MP4 · 1 quiz" data-ur="PDF + MP4 · 1 کوئز">PDF + MP4 · 1 quiz</span></div>
+              <button class="row-actions" style="border:none;" aria-label="Edit module"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-600)" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>
+            </div>
+
+            <button class="btn ghost" id="addModuleBtn" type="button" style="margin:6px 0 26px;" data-en="+ Add Module" data-ur="+ ماڈیول شامل کریں">+ Add Module</button>
+
+            <h3 style="font-family:var(--font-display); font-size:18px; margin:0 0 14px;" data-en="Upload Content" data-ur="مواد اپ لوڈ کریں">Upload Content</h3>
+            <div class="dropzone" id="courseDropzone">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)" stroke-width="1.8" style="margin:0 auto 10px; display:block;"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M20 16v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3"/></svg>
+              <p class="dz-title" data-en="Drag & drop files here, or click to browse" data-ur="فائلوں کو یہاں گھسیٹیں اور چھوڑیں، یا براؤز کرنے کے لیے کلک کریں">Drag &amp; drop files here, or click to browse</p>
+              <p class="dz-sub" data-en="PDF, DOC, DOCX or MP4 — up to 200MB" data-ur="PDF، DOC، DOCX یا MP4 — 200MB تک">PDF, DOC, DOCX or MP4 — up to 200MB</p>
+              <input type="file" id="courseFileInput" style="display:none;" accept=".pdf,.doc,.docx,.mp4" multiple />
+            </div>
+            <div id="uploadedFilesList"></div>
+
+            <div class="form-actions">
+              <button class="btn ghost" data-wizard-prev data-en="Back" data-ur="واپس">Back</button>
+              <button class="btn" data-wizard-next data-en="Next: Review & Publish" data-ur="اگلا: جائزہ اور شائع کریں">Next: Review &amp; Publish</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="panel wizard-panel" style="max-width:720px; grid-column:1/-1; display:none;">
+            <h3 style="font-family:var(--font-display); font-size:18px; margin:0 0 18px;" data-en="Review & Publish" data-ur="جائزہ اور شائع کریں">Review &amp; Publish</h3>
+            <div class="quiz-meta-grid" style="grid-template-columns:1fr 1fr;">
+              <div class="quiz-meta-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/></svg><div><strong data-en="3 modules configured" data-ur="3 ماڈیولز ترتیب دیے گئے">3 modules configured</strong><span data-en="Sequential unlock enabled" data-ur="ترتیب وار ان لاک فعال">Sequential unlock enabled</span></div></div>
+              <div class="quiz-meta-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)" stroke-width="2"><path d="M9 11l3 3L22 4"/></svg><div><strong data-en="3 module quizzes" data-ur="3 ماڈیول کوئز">3 module quizzes</strong><span data-en="Auto-scored" data-ur="خودکار اسکورنگ">Auto-scored</span></div></div>
+            </div>
+            <div class="quiz-note">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--amber-600)" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16.5v.01"/></svg>
+              <span data-en="Once published, this course will appear in the catalog and can be assigned to employees." data-ur="شائع ہونے کے بعد، یہ کورس کیٹلاگ میں ظاہر ہوگا اور ملازمین کو تفویض کیا جا سکتا ہے۔">Once published, this course will appear in the catalog and can be assigned to employees.</span>
+            </div>
+            <div class="form-actions">
+              <button class="btn ghost" data-wizard-prev data-en="Back" data-ur="واپس">Back</button>
+              <button class="btn" id="publishCourseBtn" data-en="Publish Course" data-ur="کورس شائع کریں">Publish Course</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="js/app.js"></script>
+<script>
+  document.getElementById("newCourseBtn")?.addEventListener("click", () => {
+    document.getElementById("courseListView").style.display = "none";
+    document.getElementById("courseWizardView").style.display = "block";
+  });
+  document.getElementById("backToListLink")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.getElementById("courseWizardView").style.display = "none";
+    document.getElementById("courseListView").style.display = "block";
+  });
+  document.getElementById("publishCourseBtn")?.addEventListener("click", () => {
+    document.getElementById("courseWizardView").style.display = "none";
+    document.getElementById("courseListView").style.display = "block";
+    showToast("Course published successfully");
+  });
+
+  const dz = document.getElementById("courseDropzone");
+  const fileInput = document.getElementById("courseFileInput");
+  const filesList = document.getElementById("uploadedFilesList");
+  dz?.addEventListener("click", () => fileInput.click());
+  fileInput?.addEventListener("change", () => {
+    Array.from(fileInput.files).forEach((file) => {
+      const row = document.createElement("div");
+      row.className = "uploaded-file-row";
+      const sizeKb = (file.size / 1024).toFixed(0);
+      row.innerHTML = `
+        <div class="file-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></div>
+        <div class="file-info"><div class="file-name">${file.name}</div><div class="file-size">${sizeKb} KB</div></div>
+        <button type="button" aria-label="Remove"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      `;
+      row.querySelector("button").addEventListener("click", () => row.remove());
+      filesList.appendChild(row);
+    });
+  });
+</script>
+</body>
+</html>

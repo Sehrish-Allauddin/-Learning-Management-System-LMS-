@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Data Protection & Privacy — LMS Digital Learning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span>LMS</div>
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" data-placeholder data-en="Search for courses, skills, or mentors…" data-ur="کورسز، مہارتیں یا مینٹرز تلاش کریں…" placeholder="Search for courses, skills, or mentors…" />
+    </div>
+    <div class="right">
+      <div class="lang-toggle">
+        <button data-lang="en" class="active">EN</button>
+        <span style="opacity:.4">|</span>
+        <button data-lang="ur">اردو</button>
+      </div>
+      <div class="notif-wrap">
+        <button class="icon-btn" aria-label="Notifications" id="notifBtn" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+          <span class="badge-dot"></span>
+        </button>
+        <div class="notif-dropdown" id="notifDropdown">
+          <div class="notif-head">
+            <span data-en="Notifications" data-ur="اطلاعات">Notifications</span>
+            <button class="notif-clear" data-en="Mark all read" data-ur="سب پڑھا ہوا نشان زد کریں">Mark all read</button>
+          </div>
+          <div class="notif-item unread">
+            <div class="notif-dot"></div>
+            <div>
+              <p data-en="New course assigned: Data Protection & Privacy" data-ur="نیا کورس تفویض کیا گیا: ڈیٹا کا تحفظ اور رازداری">New course assigned: Data Protection &amp; Privacy</p>
+              <span class="notif-time" data-en="2 hours ago" data-ur="2 گھنٹے پہلے">2 hours ago</span>
+            </div>
+          </div>
+          <div class="notif-item unread">
+            <div class="notif-dot"></div>
+            <div>
+              <p data-en="You earned the Top 1% Learner badge!" data-ur="آپ نے ٹاپ 1% لرنر بیج حاصل کر لیا!">You earned the Top 1% Learner badge!</p>
+              <span class="notif-time" data-en="Yesterday" data-ur="کل">Yesterday</span>
+            </div>
+          </div>
+          <div class="notif-item">
+            <div class="notif-dot read"></div>
+            <div>
+              <p data-en="Reminder: Frontline Service Excellence certificate expires soon" data-ur="یاد دہانی: فرنٹ لائن سروس ایکسیلنس سرٹیفیکیٹ جلد ختم ہو رہا ہے">Reminder: Frontline Service Excellence certificate expires soon</p>
+              <span class="notif-time" data-en="3 days ago" data-ur="3 دن پہلے">3 days ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="avatar" src="assets/avatar.svg" alt="User avatar" />
+    </div>
+  </header>
+
+  <div class="body-shell">
+    <aside class="sidebar">
+      <div class="welcome">
+        <h1 data-en="Welcome back" data-ur="خوش آمدید">Welcome back</h1>
+        <p data-en="Continue your journey" data-ur="اپنا سفر جاری رکھیں">Continue your journey</p>
+      </div>
+      <ul class="nav">
+        <li><a href="dashboard.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          <span data-en="Dashboard" data-ur="ڈیش بورڈ">Dashboard</span>
+        </a></li>
+        <li><a href="courses.html" class="active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>
+          <span data-en="My Courses" data-ur="میرے کورسز">My Courses</span>
+        </a></li>
+        <li><a href="badges.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.5 6 22l6-3 6 3-2.2-8.5"/></svg>
+          <span data-en="Badges & Certificates" data-ur="بیجز اور سرٹیفیکیٹس">Badges &amp; Certificates</span>
+        </a></li>
+        <li><a href="profile.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 5-7 8-7s6.5 2.5 8 7"/></svg>
+          <span data-en="Profile" data-ur="پروفائل">Profile</span>
+        </a></li>
+      </ul>
+      <a href="index.html" class="logout">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        <span data-en="Logout" data-ur="لاگ آؤٹ">Logout</span>
+      </a>
+    </aside>
+
+    <main class="main">
+      <a href="courses.html" class="back-link" data-en="← Back to My Courses" data-ur="← میرے کورسز پر واپس جائیں">← Back to My Courses</a>
+
+      <div class="course-detail-head">
+        <div>
+          <span class="tag" style="position:static;display:inline-block;margin-bottom:10px;" data-en="Compliance" data-ur="تعمیل">Compliance</span>
+          <h1 class="page-title" style="margin-bottom:6px;" data-en="Data Protection & Privacy" data-ur="ڈیٹا کا تحفظ اور رازداری">Data Protection &amp; Privacy</h1>
+          <p class="page-sub" data-en="Understand employee obligations for handling citizen data securely and lawfully." data-ur="شہریوں کے ڈیٹا کو محفوظ اور قانونی طریقے سے سنبھالنے کے لیے ملازمین کی ذمہ داریوں کو سمجھیں۔">Understand employee obligations for handling citizen data securely and lawfully.</p>
+        </div>
+      </div>
+
+      <div class="prog-row" style="margin-bottom:6px;">
+        <span data-en="Course progress" data-ur="کورس کی پیش رفت">Course progress</span>
+        <span>0%</span>
+      </div>
+      <div class="prog-track" style="margin-bottom:32px;"><div class="prog-fill" style="width:0%;"></div></div>
+
+      <div class="course-detail-grid">
+        <div class="panel">
+          <div class="video-placeholder">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7l6-3.5-6-3.5Z" fill="#fff" stroke="none"/></svg>
+          </div>
+          <h2 style="font-family:var(--font-display); font-size:22px; margin:22px 0 10px;" data-en="Module 1: Introduction to Data Protection" data-ur="ماڈیول 1: ڈیٹا کے تحفظ کا تعارف">Module 1: Introduction to Data Protection</h2>
+          <p style="color:var(--ink-600); font-size:14.5px; line-height:1.6; margin:0 0 24px;" data-en="This module introduces the core principles of data protection and why safeguarding citizen data is a critical responsibility for every LMS employee." data-ur="یہ ماڈیول ڈیٹا کے تحفظ کے بنیادی اصولوں کا تعارف کراتا ہے اور بتاتا ہے کہ شہریوں کے ڈیٹا کی حفاظت ہر نادرا ملازم کی اہم ذمہ داری کیوں ہے۔">This module introduces the core principles of data protection and why safeguarding citizen data is a critical responsibility for every LMS employee.</p>
+          <button class="btn" data-en="Start module" data-ur="ماڈیول شروع کریں">Start module</button>
+        </div>
+
+        <div class="panel lesson-panel">
+          <h3 style="font-family:var(--font-display); font-size:18px; margin:0 0 16px;" data-en="Course Content" data-ur="کورس کا مواد">Course Content</h3>
+          <ul class="lesson-list">
+            <li class="lesson-item active">
+              <span class="lesson-check">▶</span>
+              <span data-en="1. Introduction to Data Protection" data-ur="1. ڈیٹا کے تحفظ کا تعارف">1. Introduction to Data Protection</span>
+            </li>
+            <li class="lesson-item">
+              <span class="lesson-check">2</span>
+              <span data-en="2. Legal & Regulatory Framework" data-ur="2. قانونی اور ریگولیٹری فریم ورک">2. Legal &amp; Regulatory Framework</span>
+            </li>
+            <li class="lesson-item">
+              <span class="lesson-check">3</span>
+              <span data-en="3. Handling & Storing Citizen Data" data-ur="3. شہریوں کے ڈیٹا کو سنبھالنا اور محفوظ کرنا">3. Handling &amp; Storing Citizen Data</span>
+            </li>
+            <li class="lesson-item">
+              <span class="lesson-check">4</span>
+              <span data-en="4. Responding to Data Breaches" data-ur="4. ڈیٹا کی خلاف ورزیوں کا جواب دینا">4. Responding to Data Breaches</span>
+            </li>
+            <li class="lesson-item assessment-link">
+              <a href="assessment.html?course=compliance" style="display:flex; align-items:center; gap:12px; color:inherit;">
+                <span class="lesson-check">5</span>
+                <span data-en="5. Final Assessment" data-ur="5. حتمی جائزہ">5. Final Assessment</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Assessment Builder — LMS Digital Learning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span>LMS <span style="opacity:.6; font-weight:400; font-size:14px; margin-inline-start:4px;">Admin</span></div>
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" data-placeholder data-en="Search users, courses, reports…" data-ur="صارفین، کورسز، رپورٹس تلاش کریں…" placeholder="Search users, courses, reports…" />
+    </div>
+    <div class="right">
+      <div class="lang-toggle">
+        <button data-lang="en" class="active">EN</button>
+        <span style="opacity:.4">|</span>
+        <button data-lang="ur">اردو</button>
+      </div>
+      <button class="icon-btn" aria-label="Notifications">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+        <span class="badge-dot"></span>
+      </button>
+      <img class="avatar" src="assets/avatar.svg" alt="Admin avatar" />
+    </div>
+  </header>
+
+  <div class="body-shell">
+    <aside class="sidebar admin-sidebar">
+      <div class="welcome">
+        <span class="role-pill" data-en="Administrator" data-ur="ایڈمنسٹریٹر">Administrator</span>
+        <h1 data-en="Control Center" data-ur="کنٹرول سینٹر">Control Center</h1>
+        <p data-en="Manage content, users & progress" data-ur="مواد، صارفین اور پیش رفت کا نظم کریں">Manage content, users &amp; progress</p>
+      </div>
+      <ul class="nav">
+        <li><a href="admin-dashboard.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          <span data-en="Dashboard" data-ur="ڈیش بورڈ">Dashboard</span>
+        </a></li>
+        <li><a href="admin-users.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="4"/><path d="M2 21c1.2-4 4.3-6 7-6s5.8 2 7 6"/><circle cx="17" cy="8" r="3"/><path d="M22 21c-.5-2.7-1.8-4.5-3.5-5.5"/></svg>
+          <span data-en="Users" data-ur="صارفین">Users</span>
+        </a></li>
+        <li><a href="admin-courses.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>
+          <span data-en="Courses" data-ur="کورسز">Courses</span>
+        </a></li>
+        <li><a href="admin-assessments.html" class="active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <span data-en="Assessments" data-ur="جائزے">Assessments</span>
+        </a></li>
+        <li><a href="admin-reports.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+          <span data-en="Reports" data-ur="رپورٹس">Reports</span>
+        </a></li>
+      </ul>
+      <a href="index.html" class="logout">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        <span data-en="Logout" data-ur="لاگ آؤٹ">Logout</span>
+      </a>
+    </aside>
+
+    <main class="main">
+      <div class="admin-toolbar">
+        <div>
+          <h1 class="page-title" style="margin-bottom:6px;" data-en="Assessment Builder" data-ur="جائزہ بنانے کا آلہ">Assessment Builder</h1>
+          <p class="page-sub" style="margin-bottom:0;" data-en="Configure question banks, scoring, and attempt rules." data-ur="سوالات کے بینک، اسکورنگ، اور کوشش کے قواعد ترتیب دیں۔">Configure question banks, scoring, and attempt rules.</p>
+        </div>
+        <button class="btn" data-open-modal="newAssessmentModal" data-en="+ New Assessment" data-ur="+ نیا جائزہ">+ New Assessment</button>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data-table" data-table-target>
+          <thead>
+            <tr>
+              <th data-en="Assessment" data-ur="جائزہ">Assessment</th>
+              <th data-en="Course" data-ur="کورس">Course</th>
+              <th data-en="Questions" data-ur="سوالات">Questions</th>
+              <th data-en="Time Limit" data-ur="وقت کی حد">Time Limit</th>
+              <th data-en="Pass Score" data-ur="پاسنگ اسکور">Pass Score</th>
+              <th data-en="Attempts" data-ur="کوششیں">Attempts</th>
+              <th data-en="Actions" data-ur="اقدامات">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong data-en="Final Assessment" data-ur="حتمی جائزہ">Final Assessment</strong></td>
+              <td data-en="Project Management Essentials" data-ur="پراجیکٹ مینجمنٹ کے بنیادی اصول">Project Management Essentials</td>
+              <td>5</td>
+              <td>15 min</td>
+              <td>70%</td>
+              <td>3</td>
+              <td><div class="row-actions">
+                <button aria-label="Edit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>
+                <button aria-label="Duplicate"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+              </div></td>
+            </tr>
+            <tr>
+              <td><strong data-en="Module 2 Quiz" data-ur="ماڈیول 2 کوئز">Module 2 Quiz</strong></td>
+              <td data-en="Data Analysis with Python" data-ur="پائتھون کے ساتھ ڈیٹا تجزیہ">Data Analysis with Python</td>
+              <td>8</td>
+              <td>20 min</td>
+              <td>75%</td>
+              <td>2</td>
+              <td><div class="row-actions">
+                <button aria-label="Edit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>
+                <button aria-label="Duplicate"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+              </div></td>
+            </tr>
+            <tr>
+              <td><strong data-en="Compliance Check" data-ur="تعمیل چیک">Compliance Check</strong></td>
+              <td data-en="Data Protection & Privacy" data-ur="ڈیٹا کا تحفظ اور رازداری">Data Protection &amp; Privacy</td>
+              <td>10</td>
+              <td>25 min</td>
+              <td>80%</td>
+              <td>1</td>
+              <td><div class="row-actions">
+                <button aria-label="Edit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>
+                <button aria-label="Duplicate"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+              </div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- New Assessment Modal -->
+<div class="modal-overlay" id="newAssessmentModal">
+  <div class="modal-box" style="max-width:640px;">
+    <div class="modal-head">
+      <h3 data-en="Configure New Assessment" data-ur="نیا جائزہ ترتیب دیں">Configure New Assessment</h3>
+      <button class="modal-close" data-close-modal aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form id="newAssessmentForm" novalidate>
+        <div class="form-grid" style="margin-top:0;">
+          <div class="field full">
+            <label data-en="Assessment Title" data-ur="جائزے کا عنوان">Assessment Title</label>
+            <input type="text" placeholder="e.g. Module 4 Quiz" required />
+          </div>
+          <div class="field full">
+            <label data-en="Attach to Course / Module" data-ur="کورس / ماڈیول سے منسلک کریں">Attach to Course / Module</label>
+            <select required>
+              <option data-en="Project Management Essentials — Module 4" data-ur="پراجیکٹ مینجمنٹ — ماڈیول 4">Project Management Essentials — Module 4</option>
+              <option data-en="Data Analysis with Python — Module 3" data-ur="ڈیٹا تجزیہ — ماڈیول 3">Data Analysis with Python — Module 3</option>
+            </select>
+          </div>
+          <div class="field">
+            <label data-en="Number of Questions" data-ur="سوالات کی تعداد">Number of Questions</label>
+            <input type="number" min="1" value="5" required />
+          </div>
+          <div class="field">
+            <label data-en="Time Limit (minutes)" data-ur="وقت کی حد (منٹ)">Time Limit (minutes)</label>
+            <input type="number" min="1" value="15" required />
+          </div>
+          <div class="field">
+            <label data-en="Passing Score (%)" data-ur="پاسنگ اسکور (%)">Passing Score (%)</label>
+            <input type="number" min="1" max="100" value="70" required />
+          </div>
+          <div class="field">
+            <label data-en="Allowed Attempts" data-ur="اجازت شدہ کوششیں">Allowed Attempts</label>
+            <input type="number" min="1" value="3" required />
+          </div>
+          <div class="field full" style="flex-direction:row; align-items:center; gap:10px; margin-top:4px;">
+            <input type="checkbox" id="randomizeQ" checked style="width:16px; height:16px; accent-color:var(--green-700);" />
+            <label for="randomizeQ" style="margin:0;" data-en="Randomize question order for each attempt" data-ur="ہر کوشش کے لیے سوالات کی ترتیب بے ترتیب کریں">Randomize question order for each attempt</label>
+          </div>
+        </div>
+
+        <h3 style="font-family:var(--font-display); font-size:16px; margin:26px 0 12px;" data-en="Question Bank" data-ur="سوالات کا بینک">Question Bank</h3>
+        <div class="dropzone" id="qbDropzone">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)" stroke-width="1.8" style="margin:0 auto 8px; display:block;"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M20 16v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3"/></svg>
+          <p class="dz-title" data-en="Upload a question bank (CSV) or add questions manually" data-ur="سوالات کا بینک اپ لوڈ کریں (CSV) یا دستی طور پر سوالات شامل کریں">Upload a question bank (CSV) or add questions manually</p>
+          <p class="dz-sub" data-en="Format: question, option A–D, correct answer" data-ur="فارمیٹ: سوال، آپشن A–D، درست جواب">Format: question, option A–D, correct answer</p>
+        </div>
+        <button type="button" class="btn ghost" style="margin-top:12px;" data-en="+ Add Question Manually" data-ur="+ دستی طور پر سوال شامل کریں">+ Add Question Manually</button>
+      </form>
+    </div>
+    <div class="modal-foot">
+      <button class="btn ghost" data-close-modal data-en="Cancel" data-ur="منسوخ کریں">Cancel</button>
+      <button class="btn" id="saveAssessmentBtn" data-en="Save Assessment" data-ur="جائزہ محفوظ کریں">Save Assessment</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="js/app.js"></script>
+<script>
+  document.getElementById("saveAssessmentBtn")?.addEventListener("click", () => {
+    document.getElementById("newAssessmentModal").classList.remove("open");
+    showToast("Assessment saved successfully");
+  });
+</script>
+</body>
+</html>
