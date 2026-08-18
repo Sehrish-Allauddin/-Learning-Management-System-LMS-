@@ -336,62 +336,11 @@ Administrators can generate reports related to learning activities and performan
 
 ![Admin Reports](Picture/admin-reports.png)
 
-
-## 🔐 Login Page
-
-![LMS Login Page](./Picture/login-page.png)
-
-The login page provides secure employee authentication.
-
 ---
 
-## 📊 Learner Dashboard
 
-![Learner Dashboard](./Picture/learner-dashboard.png)
 
-The learner dashboard displays learning progress, courses, performance insights, recommendations, and learning statistics.
 
----
-
-## 🎯 Recommended Courses
-
-![Recommended Courses](./Picture/recommended-courses.png)
-
-The LMS provides personalized course recommendations based on learner activity and learning needs.
-
----
-
-## 🤖 LMS Assistant
-
-![LMS Assistant](./Picture/lms-assistant.png)
-
-The LMS Assistant helps learners with LMS navigation, courses, profiles, and general platform usage.
-
----
-
-## 📜 Certificate
-
-![Digital Certificate](./Picture/certificate.png)
-
-Learners can receive digital certificates after successfully completing required courses.
-
----
-
-## 👨‍💼 Admin Dashboard
-
-![Admin Dashboard](./Picture/admin-dashboard.png)
-
-The Admin Dashboard provides an overview of users, courses, completions, and learning analytics.
-
----
-
-## 📈 Admin Reports
-
-![Admin Reports](./Picture/admin-reports.png)
-
-Administrators can view learning reports, course completion statistics, regional performance, and other analytics.
-
----
 
 # ⚙️ Configuration
 
